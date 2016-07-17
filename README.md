@@ -1,3 +1,2 @@
 # eggdrop-tips
-usefull codes
-l
+useful codes
