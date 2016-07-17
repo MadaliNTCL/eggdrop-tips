@@ -16,6 +16,5 @@ proc botnick {nick uhost hand chan arg} {
 }
 
 proc pubcmd:help {nick uhost hand chan arg} {
-
   putserv "PRIVMSG $chan :Yes.. this is how it works."
 }
