@@ -1,0 +1,17 @@
+if {[catch {http::geturl page?[http::formatQuery var1 text var 2]} tok]} {
+	putlog "Socket error: $tok"
+	return 0
+}
+if {[http::status $tok] ne "ok"} {
+	set status [http::status $tok]
+	return 0
+}
+if {[http::ncode $tok] != 200} {
+	set code [http::code $tok]
+	http::cleanup $tok
+
+	putlog "HTTP Error: $code"
+	return 0
+}
+
+set data [http::data $tok]
