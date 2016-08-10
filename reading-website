@@ -1,4 +1,4 @@
-	if {[catch {http::geturl "https://www.googleapis.com/youtube/v3/videos?[http::formatQuery id $youtubeid key AIzaSyDxNwsjQz_ESuj2D8TnREIKvkTarPGlyaA part snippet,contentDetails,statistics,status]"} tok]} {
+	if {[catch {http::geturl "https://www.googleapis.com/youtube/v3/videos?[http::formatQuery id $youtubeid key fgjf4t34fg part snippet,contentDetails,statistics,status]"} tok]} {
 		putlog "Socket error: $tok"
 		return 0
 	}
